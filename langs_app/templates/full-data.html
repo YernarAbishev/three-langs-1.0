@@ -1,0 +1,15 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="content">
+    <div class="container">
+        <h1 class="title">{{ working_class.name }}</h1>
+        {% for data in full_data %}
+            <a href="/class/{{ working_class.slug }}/{{ data.pk }}">
+                <img src="{{ data.image.url }}" width="128px" alt="">
+            </a>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

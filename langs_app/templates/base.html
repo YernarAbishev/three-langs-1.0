@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static './css/style.css' %}">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <span>Three langs</span>
+
+                <!-- <ul class="nav">
+                    <li class="nav-item">
+                        <a href="{% url 'add_word_page' %}">Add Word</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'add_voice_page' %}">Add Voice</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'add_full_data_page' %}">Add Full Data</a>
+                    </li>
+                </ul> -->
+            </div>
+            
+        </div>
+    </header>
+
+    <main class="main">
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>

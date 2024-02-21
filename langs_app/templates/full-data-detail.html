@@ -1,0 +1,47 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="content">
+    <div class="container">
+        <h1 class="title">{{ working_class.name }}</h1>
+        <img src="{{ full_data.image.url }}" width="128px" alt="">
+        <br>
+        <hr>
+        <br>
+        <table border="1">
+            <tbody>
+                <tr>
+                    <td>
+                        {{ full_data.word.word_kz }}
+                        <br>
+                        <br>
+                        <audio controls>
+                            <source src="{{ full_data.voice.voice_kz.url }}" type="audio/mpeg">
+                            Your browser does not support the audio tag.
+                        </audio>
+                    </td>
+                    <td>
+                        {{ full_data.word.word_ru }}
+                        <br>
+                        <br>
+                        <audio controls>
+                            <source src="{{ full_data.voice.voice_ru.url }}" type="audio/mpeg">
+                            Your browser does not support the audio tag.
+                        </audio>
+                    </td>
+                    <td>
+                        {{ full_data.word.word_en }}
+                        <br>
+                        <br>
+                        <audio controls>
+                            <source src="{{ full_data.voice.voice_en.url }}" type="audio/mpeg">
+                            Your browser does not support the audio tag.
+                        </audio>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

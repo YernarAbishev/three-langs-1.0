@@ -1,0 +1,13 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="content">
+    <div class="container">
+        <h1 class="title">Выберите класс</h1>
+        {% for working_class in working_classes %}
+        <a href="{% url 'full_data_page' slug=working_class.slug %}" class="button-primary">{{ working_class.name }}</a>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

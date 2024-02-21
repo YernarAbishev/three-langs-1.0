@@ -1,0 +1,16 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="content">
+    <div class="container">
+        <h1 class="title">Добавить произношение</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form }}
+            <button class="button-primary">Добавить</button>
+        </form>
+    </div>
+    
+</div>
+{% endblock %}
